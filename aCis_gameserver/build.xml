@@ -109,8 +109,8 @@
 
 	<target name="checkRequirements" description="Check requirements.">
 		<echo message="Verification of your JDK version."/>
-		<available classname="java.lang.AutoCloseable" property="JDK8.present" />
-		<fail unless="JDK8.present" message="Java 1.8 is required, but your version is Java ${ant.java.version}. Install latest JDK." />
+		<available classname="java.lang.AutoCloseable" property="JDK7.present" />
+		<fail unless="JDK7.present" message="Java 1.7 is required, but your version is Java ${ant.java.version}. Install latest JDK." />
 	</target>
 	
 	<path id="classpath">
