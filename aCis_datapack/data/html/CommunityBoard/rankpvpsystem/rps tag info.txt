@@ -1,0 +1,26 @@
+RPS tag list:
+(this tags will be replaced by data generated in RPS)
+
+body.htm (body of the list):
+
+	%button_2%			- button on the left side of header.
+	%header%			- header name.
+	%button_1%			- button on the right side of header.
+	%list%				- top 10 list content (1 row is table header, next rows with player's data).
+	%message%			- replaced by information: why player is not listed?
+	%refresh_time%		- replaced by table with update time.
+	%version%			- current RPS version.
+	
+list_head.htm (header of the list):
+	
+	%col5_name%			- replaced by column name (PvP Kill's or Rank Point's).
+	
+	
+list_item.htm (list rows):
+
+	%position%			- position of the player on top 10 list.
+	%player_name%		- player's name.
+	%player_level%		- player's level.
+	%player_class%		- player's base class.
+	%col5_value%		- player's pvp kill's or rank point's.
+

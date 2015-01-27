@@ -30,6 +30,8 @@ import net.sf.l2j.gameserver.handler.usercommandhandlers.OlympiadStat;
 import net.sf.l2j.gameserver.handler.usercommandhandlers.PartyInfo;
 import net.sf.l2j.gameserver.handler.usercommandhandlers.SiegeStatus;
 import net.sf.l2j.gameserver.handler.usercommandhandlers.Time;
+import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.RankPvpSystemConfig;
+import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.UserCommandHandlerPvpInfo;
 
 public class UserCommandHandler
 {
@@ -55,6 +57,11 @@ public class UserCommandHandler
 		registerUserCommandHandler(new PartyInfo());
 		registerUserCommandHandler(new SiegeStatus());
 		registerUserCommandHandler(new Time());
+		// Rank PvP System by Masterio
+		if (RankPvpSystemConfig.PVP_INFO_USER_COMMAND_ENABLED && RankPvpSystemConfig.PVP_INFO_COMMAND_ENABLED)
+		{
+			registerUserCommandHandler(new UserCommandHandlerPvpInfo());
+		}
 	}
 	
 	public void registerUserCommandHandler(IUserCommandHandler handler)

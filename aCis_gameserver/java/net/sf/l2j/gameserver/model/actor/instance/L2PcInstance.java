@@ -34,7 +34,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
-
 import net.sf.l2j.Config;
 import net.sf.l2j.L2DatabaseFactory;
 import net.sf.l2j.gameserver.GameTimeController;
@@ -77,6 +76,8 @@ import net.sf.l2j.gameserver.instancemanager.QuestManager;
 import net.sf.l2j.gameserver.instancemanager.SevenSigns;
 import net.sf.l2j.gameserver.instancemanager.SevenSignsFestival;
 import net.sf.l2j.gameserver.instancemanager.SiegeManager;
+import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.RankPvpSystemConfig;
+import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.RankPvpSystemPc;
 import net.sf.l2j.gameserver.model.BlockList;
 import net.sf.l2j.gameserver.model.FishData;
 import net.sf.l2j.gameserver.model.L2AccessLevel;
@@ -439,6 +440,10 @@ public final class L2PcInstance extends L2Playable
 	private int _duelState = Duel.DUELSTATE_NODUEL;
 	private int _duelId = 0;
 	private SystemMessageId _noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
+	
+	// Rank PvP System by Masterio
+	private RankPvpSystemPc _rankPvpSystemPc = new RankPvpSystemPc();
+	public RankPvpSystemPc getRankPvpSystemPc(){ return _rankPvpSystemPc; }
 	
 	private L2Vehicle _vehicle = null;
 	private Point3D _inVehiclePosition;
@@ -4204,7 +4209,8 @@ public final class L2PcInstance extends L2Playable
 		// If in duel and you kill (only can kill l2summon), do nothing
 		if (isInDuel() && targetPlayer.isInDuel())
 			return;
-		
+		// Rank PvP System by Masterio
+		_rankPvpSystemPc.runPvpTask(this, target);
 		// If in pvp zone, do nothing.
 		if (isInsideZone(ZoneId.PVP) && targetPlayer.isInsideZone(ZoneId.PVP))
 		{
@@ -4229,6 +4235,8 @@ public final class L2PcInstance extends L2Playable
 			if (target instanceof L2PcInstance)
 			{
 				// Add PvP point to attacker.
+				// Rank PvP System by Masterio
+				if(!RankPvpSystemConfig.LEGAL_COUNTER_ALTT_ENABLED)
 				setPvpKills(getPvpKills() + 1);
 				
 				// Send UserInfo packet to attacker with its Karma and PK Counter

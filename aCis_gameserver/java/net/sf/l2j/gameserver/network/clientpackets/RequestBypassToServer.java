@@ -22,6 +22,7 @@ import net.sf.l2j.gameserver.communitybbs.CommunityBoard;
 import net.sf.l2j.gameserver.datatables.AdminCommandAccessRights;
 import net.sf.l2j.gameserver.handler.AdminCommandHandler;
 import net.sf.l2j.gameserver.handler.IAdminCommandHandler;
+import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.RankPvpSystemBypass;
 import net.sf.l2j.gameserver.model.L2Object;
 import net.sf.l2j.gameserver.model.L2World;
 import net.sf.l2j.gameserver.model.actor.L2Npc;
@@ -159,6 +160,10 @@ public final class RequestBypassToServer extends L2GameClientPacket
 				int heroid = Hero.getInstance().getHeroByClass(heroclass);
 				if (heroid > 0)
 					Hero.getInstance().showHeroDiary(activeChar, heroclass, heroid, heropage);
+			}
+			else if(_command.startsWith("RPS.")) // Rank PvP System by Masterio
+			{ 
+				RankPvpSystemBypass.executeCommand(activeChar, _command);
 			}
 			else if (_command.startsWith("arenachange")) // change
 			{

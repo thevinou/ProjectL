@@ -93,6 +93,7 @@ import net.sf.l2j.gameserver.instancemanager.SevenSignsFestival;
 import net.sf.l2j.gameserver.instancemanager.SiegeManager;
 import net.sf.l2j.gameserver.instancemanager.ZoneManager;
 import net.sf.l2j.gameserver.instancemanager.games.MonsterRace;
+import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.RankPvpSystemConfig;
 import net.sf.l2j.gameserver.model.L2Manor;
 import net.sf.l2j.gameserver.model.L2World;
 import net.sf.l2j.gameserver.model.entity.Hero;
@@ -249,6 +250,10 @@ public class GameServer
 		
 		Util.printSection("Four Sepulchers");
 		FourSepulchersManager.getInstance().init();
+		
+		// Rank PvP System by Masterio
+		Util.printSection("Masterio Pack - PVP System");
+		RankPvpSystemConfig.load();
 		
 		Util.printSection("Quests & Scripts");
 		QuestManager.getInstance();

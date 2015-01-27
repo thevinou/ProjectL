@@ -29,6 +29,8 @@ import net.sf.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import net.sf.l2j.gameserver.instancemanager.RaidBossSpawnManager;
 import net.sf.l2j.gameserver.instancemanager.SevenSigns;
 import net.sf.l2j.gameserver.instancemanager.SevenSignsFestival;
+import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.PvpTable;
+import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.RankPvpSystemConfig;
 import net.sf.l2j.gameserver.model.L2World;
 import net.sf.l2j.gameserver.model.actor.instance.L2PcInstance;
 import net.sf.l2j.gameserver.model.entity.Hero;
@@ -200,6 +202,17 @@ public class Shutdown extends Thread
 				ItemsOnGroundManager.getInstance().saveInDb();
 				ItemsOnGroundManager.getInstance().cleanUp();
 				_log.info("ItemsOnGroundManager: Items on ground have been saved.");
+			}
+			
+			// Rank PvP System by Masterio:
+			if (RankPvpSystemConfig.RANK_PVP_SYSTEM_ENABLED)
+			{
+				int[] up = PvpTable.getInstance().updateDB();
+				
+				if(up[0] == 0)
+				{
+					_log.info("PvpTable: Data saved ["+up[1]+" inserts and "+up[2]+" updates].");
+				}
 			}
 			
 			try

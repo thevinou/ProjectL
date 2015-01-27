@@ -29,6 +29,7 @@ import net.sf.l2j.gameserver.instancemanager.PetitionManager;
 import net.sf.l2j.gameserver.instancemanager.QuestManager;
 import net.sf.l2j.gameserver.instancemanager.SevenSigns;
 import net.sf.l2j.gameserver.instancemanager.SiegeManager;
+import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.RankPvpSystem;
 import net.sf.l2j.gameserver.model.L2Clan;
 import net.sf.l2j.gameserver.model.L2Clan.SubPledge;
 import net.sf.l2j.gameserver.model.L2World;
@@ -233,6 +234,8 @@ public class EnterWorld extends L2GameClientPacket
 			sendPacket(html);
 		}
 		
+		// Rank PvP System by Masterio:
+		RankPvpSystem.updateNickAndTitleColor(activeChar, null);
 		PetitionManager.getInstance().checkPetitionMessages(activeChar);
 		
 		// no broadcast needed since the player will already spawn dead to others
