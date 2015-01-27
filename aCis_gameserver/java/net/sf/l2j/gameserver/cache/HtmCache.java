@@ -1,0 +1,162 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package net.sf.l2j.gameserver.cache;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileFilter;
+import java.io.FileInputStream;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Logger;
+
+import net.sf.l2j.commons.io.UnicodeReader;
+import net.sf.l2j.commons.io.filters.HtmFilter;
+
+/**
+ * @author Layane, reworked by Java-man and Hasha
+ */
+public class HtmCache
+{
+	private static final Logger _log = Logger.getLogger(HtmCache.class.getName());
+	
+	private static final Map<Integer, String> _htmCache = new HashMap<>();
+	private static final FileFilter _htmFilter = new HtmFilter();
+	
+	public static HtmCache getInstance()
+	{
+		return SingletonHolder._instance;
+	}
+	
+	protected HtmCache()
+	{
+		reload();
+	}
+	
+	/**
+	 * Cleans HtmCache.
+	 */
+	public void reload()
+	{
+		_log.info("HtmCache: Cache cleared, had " + _htmCache.size() + " entries.");
+		_htmCache.clear();
+	}
+	
+	/**
+	 * Reloads given directory. All sub-directories are parsed, all html files are loaded to HtmCache.
+	 * @param path : Directory to be reloaded.
+	 */
+	public void reloadPath(String path)
+	{
+		parseDir(new File(path));
+		_log.info("HtmCache: Reloaded specified " + path + " path.");
+	}
+	
+	/**
+	 * Parse given directory, all html files are loaded to HtmCache.
+	 * @param dir : Directory to be parsed.
+	 */
+	private static void parseDir(File dir)
+	{
+		for (File file : dir.listFiles(_htmFilter))
+		{
+			if (file.isDirectory())
+				parseDir(file);
+			else
+				loadFile(file);
+		}
+	}
+	
+	/**
+	 * Loads html file content to HtmCache.
+	 * @param file : File to be cached.
+	 * @return String : Content of the file.
+	 */
+	private static String loadFile(File file)
+	{
+		if (file.exists() && _htmFilter.accept(file) && !file.isDirectory())
+		{
+			try (FileInputStream fis = new FileInputStream(file); UnicodeReader ur = new UnicodeReader(fis, "UTF-8"); BufferedReader br = new BufferedReader(ur))
+			{
+				StringBuilder sb = new StringBuilder();
+				String line;
+				
+				while ((line = br.readLine()) != null)
+					sb.append(line).append('\n');
+				
+				String content = sb.toString().replaceAll("\r\n", "\n");
+				sb = null;
+				
+				_htmCache.put(file.getPath().replace("\\", "/").hashCode(), content);
+				return content;
+			}
+			catch (Exception e)
+			{
+				_log.warning("HtmCache: problem with loading file " + e);
+			}
+		}
+		
+		return null;
+	}
+	
+	/**
+	 * Check if an HTM exists and can be loaded. If so, it is loaded into HtmCache.
+	 * @param path The path to the HTM
+	 * @return true if the HTM can be loaded.
+	 */
+	public boolean isLoadable(String path)
+	{
+		return loadFile(new File(path)) != null;
+	}
+	
+	/**
+	 * Return content of html message given by filename.
+	 * @param filename : Desired html filename.
+	 * @return String : Returns content if filename exists, otherwise returns null.
+	 */
+	public String getHtm(String filename)
+	{
+		if (filename == null || filename.isEmpty())
+			return "";
+		
+		String content = _htmCache.get(filename.hashCode());
+		if (content == null)
+			content = loadFile(new File(filename));
+		
+		return content;
+	}
+	
+	/**
+	 * Return content of html message given by filename. In case filename does not exist, returns notice.
+	 * @param filename : Desired html filename.
+	 * @return String : Returns content if filename exists, otherwise returns notice.
+	 */
+	public String getHtmForce(String filename)
+	{
+		String content = getHtm(filename);
+		if (content == null)
+		{
+			content = "<html><body>My html is missing:<br>" + filename + "</body></html>";
+			_log.warning("HtmCache: " + filename + " is missing.");
+		}
+		
+		return content;
+	}
+	
+	private static class SingletonHolder
+	{
+		protected static final HtmCache _instance = new HtmCache();
+	}
+}
