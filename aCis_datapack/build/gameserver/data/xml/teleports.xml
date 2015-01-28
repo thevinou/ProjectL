@@ -656,4 +656,37 @@
 	<teleport id="10035" loc_x="146705" loc_y="25840" loc_z="-2000" price="17000" fornoble="0"/>
 	<teleport id="10036" loc_x="164564" loc_y="-48145" loc_z="-3536" price="11000" fornoble="0"/>
 	<teleport id="10037" loc_x="144880" loc_y="-113468" loc_z="-2560" price="14000" fornoble="0"/>
+	<!-- Custom Gk by Guina -->
+	<teleport id="10100" loc_x="83424" loc_y="148626" loc_z="-3405" price="1" fornoble="0"/><!-- Giran -->
+	<teleport id="10101" loc_x="147449" loc_y="25810" loc_z="-2013" price="1" fornoble="0"/><!-- Aden -->
+	<teleport id="10102" loc_x="147718" loc_y="-56609" loc_z="-2781" price="1" fornoble="0"/><!-- Goddard -->
+	<teleport id="10103" loc_x="43829" loc_y="-48088" loc_z="-797" price="1" fornoble="0"/><!-- Rune -->
+	<teleport id="10104" loc_x="87359" loc_y="-142067" loc_z="-1341" price="1" fornoble="0"/><!-- Schuttgard -->
+	<teleport id="10105" loc_x="82745" loc_y="53580" loc_z="-1496" price="1" fornoble="0"/><!-- Oren -->
+	<teleport id="10106" loc_x="111380" loc_y="219023" loc_z="-3546" price="1" fornoble="0"/><!-- Heine -->
+	<teleport id="10107" loc_x="16036" loc_y="143219" loc_z="-2758" price="1" fornoble="0"/><!-- Dion -->
+	<teleport id="10108" loc_x="-12806" loc_y="122692" loc_z="-3117" price="1" fornoble="0"/><!-- Gludio -->
+	<teleport id="10109" loc_x="-80839" loc_y="149980" loc_z="-3044" price="1" fornoble="0"/><!-- Gludin -->
+	
+	<teleport id="10110" loc_x="-84387" loc_y="244407" loc_z="-3730" price="1" fornoble="0"/><!-- Talking Island -->
+	<teleport id="10111" loc_x="47187" loc_y="50985" loc_z="-2996" price="1" fornoble="0"/><!-- Elven Village -->
+	<teleport id="10112" loc_x="9872" loc_y="15746" loc_z="-4578" price="1" fornoble="0"/><!-- D.A. Village -->
+	<teleport id="10113" loc_x="115429" loc_y="-178299" loc_z="-929" price="1" fornoble="0"/><!-- Dwarven Village -->
+	<teleport id="10114" loc_x="-44846" loc_y="-112589" loc_z="-242" price="1" fornoble="0"/><!-- Orc Village -->
+	<teleport id="10115" loc_x="116764" loc_y="76947" loc_z="-2717" price="1" fornoble="0"/><!-- Hunters Village -->
+	
+	<teleport id="10116" loc_x="47159" loc_y="187394" loc_z="-3485" price="1" fornoble="0"/><!-- safe farm 1 -->
+	<teleport id="10117" loc_x="43604" loc_y="189254" loc_z="-3486" price="1" fornoble="0"/><!-- safe farm 2 -->
+	
+	<teleport id="10118" loc_x="48336" loc_y="-107734" loc_z="-1577" price="1" fornoble="0"/><!-- solo farm 1 -->
+	<teleport id="10119" loc_x="47968" loc_y="-115419" loc_z="-3744" price="1" fornoble="0"/><!-- solo farm 2 -->
+	
+	<teleport id="10120" loc_x="7863" loc_y="-19980" loc_z="-3601" price="1" fornoble="0"/><!-- party farm  1 -->
+	<teleport id="10121" loc_x="6082" loc_y="-5132" loc_z="-3346" price="1" fornoble="0"/><!-- party farm  2 -->
+	
+	<teleport id="10122" loc_x="185791" loc_y="20346" loc_z="-3337" price="1" fornoble="0"/><!-- Rb Zone -->
+	
+	<teleport id="10123" loc_x="126070" loc_y="120897" loc_z="-2586" price="1" fornoble="0"/><!-- pvp1 -->
+	<teleport id="10124" loc_x="126226" loc_y="124622" loc_z="-2586" price="1" fornoble="0"/><!-- pvp2 -->
+
 </list>

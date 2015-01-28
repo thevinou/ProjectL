@@ -18192,47 +18192,43 @@
 	</npc>
 	<npc id="25350" name="Knight of Shadow" title="">
 		<set name="level" val="80"/>
-		<set name="radius" val="9"/>
+		<set name="radius" val="17"/>
 		<set name="height" val="34"/>
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="L2Monster"/>
-		<set name="exp" val="0"/>
+		<set name="exp" val="5000"/>
 		<set name="sp" val="38050"/>
-		<set name="hp" val="22472.9001026906"/>
+		<set name="hp" val="11231.9001026906"/>
 		<set name="mp" val="1674.8"/>
 		<set name="hpRegen" val="71.614397311965"/>
 		<set name="mpRegen" val="3"/>
-		<set name="pAtk" val="2287.59906992611"/>
+		<set name="pAtk" val="900.59906992611"/>
 		<set name="pDef" val="512.0625"/>
-		<set name="mAtk" val="1732.9485670366"/>
+		<set name="mAtk" val="1132.9485670366"/>
 		<set name="mDef" val="499.6"/>
 		<set name="crit" val="1"/>
-		<set name="atkSpd" val="253"/>
+		<set name="atkSpd" val="600"/>
 		<set name="str" val="40"/>
 		<set name="int" val="21"/>
 		<set name="dex" val="30"/>
 		<set name="wit" val="20"/>
 		<set name="con" val="43"/>
 		<set name="men" val="20"/>
-		<set name="corpseTime" val="7"/>
-		<set name="walkSpd" val="50"/>
-		<set name="runSpd" val="190"/>
+		<set name="corpseTime" val="3"/>
+		<set name="walkSpd" val="17"/>
+		<set name="runSpd" val="110"/>
 		<set name="dropHerbGroup" val="0"/>
 		<set name="attackRange" val="40"/>
 		<ai type="mage" ssCount="0" ssRate="0" spsCount="0" spsRate="0" aggro="0" canMove="true" seedable="false"/>
 		<skills>
-			<skill id="4045" level="1"/>
-			<skill id="4191" level="9"/>
-			<skill id="4201" level="9"/>
-			<skill id="4278" level="1"/>
-			<skill id="4333" level="5"/>
-			<skill id="4414" level="3"/>
-			<skill id="4416" level="9"/>
 		</skills>
 		<drops>
 			<category id="1">
-				<drop itemid="1344" min="60" max="180" chance="414167"/>
+				<drop itemid="6393" min="2" max="5" chance="999000"/>
+			</category>
+			<category id="0">
+				<drop itemid="57" min="10000000" max="30000000" chance="999000"/>
 			</category>
 		</drops>
 	</npc>
@@ -18243,18 +18239,21 @@
 		<set name="rHand" val="0"/>
 		<set name="lHand" val="0"/>
 		<set name="type" val="L2Monster"/>
-		<set name="exp" val="0"/>
+		<set name="exp" val="5000"/>
 		<set name="sp" val="38050"/>
-		<set name="hp" val="33541.6419443144"/>
+		<set name="hp" val="11231.9001026906"/>
 		<set name="mp" val="1674.8"/>
 		<set name="hpRegen" val="71.614397311965"/>
 		<set name="mpRegen" val="3"/>
-		<set name="pAtk" val="1715.74219599948"/>
+		<set name="pAtk" val="900.59906992611"/>
 		<set name="pDef" val="512.0625"/>
-		<set name="mAtk" val="974.826217605108"/>
+		<set name="mAtk" val="1132.9485670366"/>
+		<set name="mDef" val="499.6"/>
+		<set name="crit" val="1"/>
+		<set name="atkSpd" val="600"/>
 		<set name="mDef" val="499.6"/>
 		<set name="crit" val="4"/>
-		<set name="atkSpd" val="253"/>
+		<set name="atkSpd" val="550"/>
 		<set name="str" val="40"/>
 		<set name="int" val="21"/>
 		<set name="dex" val="30"/>
@@ -18268,17 +18267,13 @@
 		<set name="attackRange" val="40"/>
 		<ai type="default" ssCount="0" ssRate="0" spsCount="0" spsRate="0" aggro="0" canMove="true" seedable="false"/>
 		<skills>
-			<skill id="4045" level="1"/>
-			<skill id="4212" level="9"/>
-			<skill id="4278" level="1"/>
-			<skill id="4333" level="5"/>
-			<skill id="4414" level="3"/>
-			<skill id="4416" level="9"/>
-			<skill id="4788" level="9"/>
 		</skills>
 		<drops>
 			<category id="1">
-				<drop itemid="1344" min="60" max="180" chance="414167"/>
+				<drop itemid="6393" min="5" max="10" chance="999000"/>
+			</category>
+			<category id="0">
+				<drop itemid="57" min="20000000" max="50000000" chance="999000"/>
 			</category>
 		</drops>
 	</npc>

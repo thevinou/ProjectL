@@ -1182,15 +1182,15 @@
 			<skill id="223" lvl="48" sp="1080000" minLvl="74" />
 			<skill id="223" lvl="49" sp="1080000" minLvl="74" />
 			<!-- Dance of the Warrior -->
-			<skill id="271" lvl="1" sp="170000" minLvl="55" />
+			<skill id="7042" lvl="1" sp="170000" minLvl="55" />
 			<!-- Dance of Inspiration -->
 			<skill id="272" lvl="1" sp="67000" minLvl="46" />
 			<!-- Dance of the Mystic -->
-			<skill id="273" lvl="1" sp="89000" minLvl="49" />
+			<skill id="7043" lvl="1" sp="89000" minLvl="49" />
 			<!-- Dance of Fire -->
 			<skill id="274" lvl="1" sp="43000" minLvl="40" />
 			<!-- Dance of Fury -->
-			<skill id="275" lvl="1" sp="200000" minLvl="58" />
+			<skill id="7041" lvl="1" sp="200000" minLvl="58" />
 			<!-- Dance of Concentration -->
 			<skill id="276" lvl="1" sp="167000" minLvl="52" />
 			<!-- Dance of Light -->

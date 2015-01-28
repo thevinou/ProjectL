@@ -12533,27 +12533,25 @@
 		<set name="runSpd" val="220"/>
 		<set name="dropHerbGroup" val="0"/>
 		<set name="attackRange" val="40"/>
-		<ai type="default" ssCount="0" ssRate="0" spsCount="0" spsRate="0" aggro="1000" canMove="true" seedable="false"/>
+		<ai type="default" ssCount="0" ssRate="0" spsCount="0" spsRate="0" aggro="0" canMove="true" seedable="false"/>
 		<skills>
 			<skill id="4416" level="3"/>
 		</skills>
 		<drops>
-			<category id="1">
-				<drop itemid="5541" min="1" max="1" chance="20000"/>
-				<drop itemid="8627" min="1" max="1" chance="45454"/>
-				<drop itemid="8633" min="1" max="1" chance="58823"/>
-				<drop itemid="8894" min="1" max="1" chance="52632"/>
-				<drop itemid="8895" min="1" max="1" chance="333333"/>
-				<drop itemid="8956" min="1" max="1" chance="4975"/>
+			<category id="3">
+				<drop itemid="6570" min="3" max="5" chance="250000"/>
+				<drop itemid="6578" min="4" max="5" chance="250000"/>
+				<drop itemid="6577" min="1" max="4" chance="250000"/>
+				<drop itemid="6572" min="1" max="3" chance="250000"/>
 			</category>
 			<category id="2">
-				<drop itemid="8894" min="1" max="1" chance="44775"/>
+				<drop itemid="6393" min="250" max="400" chance="999992"/>
 			</category>
-			<category id="3">
-				<drop itemid="8895" min="1" max="1" chance="29412"/>
+			<category id="4">
+				<drop itemid="8762" min="5" max="10" chance="999991"/>
 			</category>
 			<category id="0">
-				<drop itemid="57" min="80380" max="138860" chance="700000"/>
+				<drop itemid="57" min="500000000" max="800000000" chance="999999"/>
 			</category>
 		</drops>
 	</npc>
