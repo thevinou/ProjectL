@@ -15,6 +15,13 @@
 		<node X="17273" Y="152800" />
 		<node X="26598" Y="152854" />
 	</zone>
+	<zone type="SiegeZone" shape="NPoly" minZ="-4515" maxZ="19935"><!-- giran_castle_battlefield_territory -->
+		<stat name="castleId" val="3" />
+		<node X="121412" Y="140594" />
+		<node X="121358" Y="149919" />
+		<node X="108972" Y="149896" />
+		<node X="109026" Y="140571" />
+	</zone>
 	<zone type="SiegeZone" shape="NPoly" minZ="-4242" maxZ="19935"><!-- oren_castle_battlefield_territory -->
 		<stat name="castleId" val="4" />
 		<node X="87488" Y="32689" />
