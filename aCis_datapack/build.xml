@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <project name="aCis_datapack" default="build" basedir=".">
 
-	<property name="build" location="build" />
+	<property name="build" location="c:\L2\server" />
 	<property name="build.game" location="${build}/gameserver" />
 	<property name="build.login" location="${build}/login" />
 	<property name="build.sql" location="${build}/sql" />

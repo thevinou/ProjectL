@@ -3,9 +3,9 @@
 
 	<property name="src" location="java" />
 	<property name="lib" location="lib" />
-	<property name="build" location="build" />
+	<property name="build" location="c:\L2" />
 	<property name="build.classes" location="${build}/classes" />
-	<property name="build.dist" location="${build}/dist" />
+	<property name="build.dist" location="${build}/server" />
 	<property name="build.dist.login" location="${build.dist}/login" />
 	<property name="build.dist.game" location="${build.dist}/gameserver" />
 
@@ -95,16 +95,12 @@
 		<javac srcdir="${src}" classpathref="classpath" destdir="${build.classes}" compiler="javac1.7" debug="true" debuglevel="lines,vars,source" includeantruntime="false" source="1.7" target="1.7" />
 	</target>
 	
-	<target name="init" depends="clean,checkRequirements" description="Create the output directories.">
+	<target name="init" depends="checkRequirements" description="Create the output directories.">
 		<mkdir dir="${build}" />
 		<mkdir dir="${build.classes}" />
 		<mkdir dir="${build.dist}" />
 		<mkdir dir="${build.dist.login}" />
 		<mkdir dir="${build.dist.game}" />
-	</target>
-
-	<target name="clean" description="Remove the output directories.">
-		<delete dir="${build}" />
 	</target>
 
 	<target name="checkRequirements" description="Check requirements.">
