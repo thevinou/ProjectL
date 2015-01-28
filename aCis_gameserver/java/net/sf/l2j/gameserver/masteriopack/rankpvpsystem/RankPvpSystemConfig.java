@@ -661,7 +661,7 @@ public final class RankPvpSystemConfig
 	// --------------------------------------------------
 	// Constants - not placed in configuration file
 	// --------------------------------------------------
-	public static final String RANK_PVP_SYSTEM_CONFIG_FILE = "./config/masterio/RankPvpSystemConfig.properties";
+	public static final String RANK_PVP_SYSTEM_CONFIG_FILE = "./config/RankPvpSystemConfig.properties";
 	
 	public static final String RANK_PVP_SYSTEM_VERSION = "3.8.7";
 
