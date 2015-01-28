@@ -1059,13 +1059,13 @@
 			<!-- Sprint -->
 			<skill id="230" lvl="2" sp="214000" minLvl="52" />
 			<!-- Song of Earth -->
-			<skill id="264" lvl="1" sp="220000" minLvl="55" />
+			<skill id="7044" lvl="1" sp="220000" minLvl="55" />
 			<!-- Song of Life -->
 			<skill id="265" lvl="1" sp="214000" minLvl="52" />
 			<!-- Song of Water -->
 			<skill id="266" lvl="1" sp="267000" minLvl="58" />
 			<!-- Song of Warding -->
-			<skill id="267" lvl="1" sp="49000" minLvl="40" />
+			<skill id="7045" lvl="1" sp="49000" minLvl="40" />
 			<!-- Song of Wind -->
 			<skill id="268" lvl="1" sp="86000" minLvl="46" />
 			<!-- Song of Hunter -->
@@ -1073,7 +1073,7 @@
 			<!-- Song of Invocation -->
 			<skill id="270" lvl="1" sp="58000" minLvl="43" />
 			<!-- Song of Vitality -->
-			<skill id="304" lvl="1" sp="880000" minLvl="66" />
+			<skill id="7046" lvl="1" sp="880000" minLvl="66" />
 			<!-- Song of Vengeance -->
 			<skill id="305" lvl="1" sp="3250000" minLvl="74" />
 			<!-- Song of Flame Guard -->

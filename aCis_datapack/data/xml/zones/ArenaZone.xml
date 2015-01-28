@@ -34,5 +34,13 @@
 		<node X="151216" Y="47259" />
 		<node X="150947" Y="46960" />
 		<spawn X="147451" Y="46728" Z="-3410" />
+
+	<zone type="ArenaZone" shape="NPoly" minZ="-4515" maxZ="19935"><!-- giran_castle_battlefield_territory -->
+		<stat name="castleId" val="3" />
+		<node X="121412" Y="140594" />
+		<node X="121358" Y="149919" />
+		<node X="108972" Y="149896" />
+		<node X="109026" Y="140571" />
+	</zone>
 	</zone>
 </list>
