@@ -32,6 +32,7 @@ import net.sf.l2j.gameserver.handler.usercommandhandlers.SiegeStatus;
 import net.sf.l2j.gameserver.handler.usercommandhandlers.Time;
 import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.RankPvpSystemConfig;
 import net.sf.l2j.gameserver.masteriopack.rankpvpsystem.UserCommandHandlerPvpInfo;
+import net.sf.l2j.gameserver.voteEngine.RewardVote;
 
 public class UserCommandHandler
 {
@@ -62,6 +63,8 @@ public class UserCommandHandler
 		{
 			registerUserCommandHandler(new UserCommandHandlerPvpInfo());
 		}
+		registerUserCommandHandler(new RewardVote());
+
 	}
 	
 	public void registerUserCommandHandler(IUserCommandHandler handler)
