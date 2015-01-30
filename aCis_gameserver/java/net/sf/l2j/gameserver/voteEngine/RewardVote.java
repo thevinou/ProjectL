@@ -49,8 +49,8 @@ public class RewardVote implements IUserCommandHandler
 		private static int WAIT_TIME = 5;
 		private static int MIN_LEVEL_TO_ALLOW_VOTE = 40;
 		private static final long INTERVAL = WAIT_TIME * 60 * 1000; // in minutes.
-		private static int rewardId = 57;
-		private static int rewardAmount = 10000;
+		private static int rewardId = 4037;
+		private static int rewardAmount = 10;
 		
 		public List<L2PcInstance> _safePeople = new ArrayList<>();
 		
